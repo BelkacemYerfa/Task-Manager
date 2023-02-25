@@ -6,6 +6,8 @@ const routes = require('./routes/task.js');
 const connectDb = require('./db/connect.js');
 require('dotenv').config();
 
+
+app.use(express.static('./public')); //to serve static files
 app.use(express.json());
 
 app.get('/' , (req , res)=>{
